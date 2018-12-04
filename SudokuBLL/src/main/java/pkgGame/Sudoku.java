@@ -603,6 +603,10 @@ public class Sudoku extends LatinSquare implements Serializable {
 		}
 	}
 
+	
+	public static boolean isGameOver() {
+		return mistakes >= maxMistakes;
+	}
 	/**
 	 * fillRemaining - Recursive method to fill each cell... one by one...
 	 * backtracking if the given value doesn't fit in the cell.
