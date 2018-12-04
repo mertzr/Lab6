@@ -141,7 +141,7 @@ public class SudokuStyler {
 					sc.getStyleClass().clear();
 					sc.setStyle("-fx-background-color: #AA0000;");
 
-					// sc.getChildren().add(0, p);
+					// sc.getChildren().add(0, p); 
 				}
 			}
 		});
