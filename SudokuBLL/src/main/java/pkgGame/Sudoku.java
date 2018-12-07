@@ -986,4 +986,13 @@ public class Sudoku extends LatinSquare implements Serializable {
 		}
 		
 	}
+	
+	public int getMaxMistakes() {
+		if (eGameDifficulty ==  eGameDifficulty.EASY)
+			return 5;
+		else if (eGameDifficulty ==  eGameDifficulty.MEDIUM)
+			return 4;
+		else if (eGameDifficulty ==  eGameDifficulty.HARD)
+			return 3;
+	}
 }
