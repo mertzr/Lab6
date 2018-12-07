@@ -123,8 +123,6 @@ public class SudokuStyler {
 		String strStyle = "-fx-background-color: #AA0000; ";
 		p.setStyle(strStyle);
 		
-		Sudoku.updateMistakes();
-		
 		return p;
 	}
 
