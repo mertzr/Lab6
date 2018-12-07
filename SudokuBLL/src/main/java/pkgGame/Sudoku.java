@@ -603,6 +603,10 @@ public class Sudoku extends LatinSquare implements Serializable {
 		}
 	}
 
+	
+	public static boolean isGameOver() {
+		return mistakes >= maxMistakes;
+	}
 	/**
 	 * fillRemaining - Recursive method to fill each cell... one by one...
 	 * backtracking if the given value doesn't fit in the cell.
@@ -965,5 +969,22 @@ public class Sudoku extends LatinSquare implements Serializable {
 
 		}
 
+	}
+	
+	public void isSolved() {
+		boolean solved=true;
+		int puzzle[][] = getPuzzle();
+		
+		for(int i= 0; i<puzzle.length;i++) {
+			for(int j = 0; j<puzzle[i].length;j++)
+			if (puzzle[i][j]==0) {
+				solved=false;
+			}
+		}
+		
+		if (solved==true) {
+			System.out.println("Congrats you have solved the puzzle");
+		}
+		
 	}
 }
