@@ -51,15 +51,6 @@ public class Sudoku extends LatinSquare implements Serializable {
 	private eGameDifficulty eGameDifficulty;
 	
 	private static int mistakes;
-	
-	public static int getMistakes() {
-		return mistakes;
-	}
-
-	// used for now in SodukuJavaFX, under SudokuStyler, in getRedPane()
-	public static void updateMistakes() {
-		mistakes += 1;
-	}
 
 	/**
 	 * Sudoku - No-arg private constructor should set the eGameDifficulty to EASY by
@@ -145,6 +136,14 @@ public class Sudoku extends LatinSquare implements Serializable {
 			throw new Exception("Invalid size");
 		}
 
+	}
+	
+	public static int getMistakes() {
+		return mistakes;
+	}
+
+	public static void updateMistakes() {
+		mistakes += 1;
 	}
 
 	public int getiSqrtSize() {
