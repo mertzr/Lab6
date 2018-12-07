@@ -329,7 +329,11 @@ public class SudokuController implements Initializable {
 								if (game.getShowHints()) {
 
 								}
-
+								Sudoku.updateMistakes();
+								
+								if (Sudoku.mistakes >= ) {
+									
+								}
 							}
 
 							//	This is the code that is actually taking the cell value from the drag-from 
