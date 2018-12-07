@@ -326,14 +326,19 @@ public class SudokuController implements Initializable {
 							Cell CellFrom = (Cell) db.getContent(myFormat);
 
 							if (!s.isValidValue(CellTo.getiRow(), CellTo.getiCol(), CellFrom.getiCellValue())) {
-								if (game.getShowHints()) {
-
-								}
-								Sudoku.updateMistakes();
 								
 								if (Sudoku.getMistakes() >= Sudoku.getMaxMistakes()) {
 									
 								}
+
+								Sudoku.updateMistakes();
+								//BuildTopGrid();
+								
+								if (game.getShowHints()) {
+
+								}
+								
+								
 							}
 
 							//	This is the code that is actually taking the cell value from the drag-from 
