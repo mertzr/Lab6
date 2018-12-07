@@ -69,4 +69,16 @@ public enum eGameDifficulty {
 		}
 		return eGD;
 	}
+	
+	public int getMaxMistakes() {
+		int mistakesDifficulty = 0;
+		if (Sudoku.eGameDifficulty ==  eGameDifficulty.EASY)
+			mistakesDifficulty = 5;
+		else if (eGameDifficulty ==  eGameDifficulty.MEDIUM)
+			mistakesDifficulty = 4;
+		else if (eGameDifficulty ==  eGameDifficulty.HARD)
+			mistakesDifficulty = 3;
+		return mistakesDifficulty;
+	}
+	
 }

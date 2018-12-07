@@ -48,7 +48,7 @@ public class Sudoku extends LatinSquare implements Serializable {
 
 	private HashMap<Integer, SudokuCell> cells = new HashMap<Integer, SudokuCell>();
 
-	private eGameDifficulty eGameDifficulty;
+	private static eGameDifficulty eGameDifficulty;
 	
 	private static int mistakes;
 
@@ -604,7 +604,7 @@ public class Sudoku extends LatinSquare implements Serializable {
 
 	
 	public static boolean isGameOver() {
-		return mistakes >= maxMistakes;
+		return mistakes >= getMaxMistakes();
 	}
 	/**
 	 * fillRemaining - Recursive method to fill each cell... one by one...
@@ -987,7 +987,7 @@ public class Sudoku extends LatinSquare implements Serializable {
 		
 	}
 	
-	public int getMaxMistakes() {
+	public static int getMaxMistakes() {
 		int mistakesDifficulty = 0;
 		if (eGameDifficulty ==  eGameDifficulty.EASY)
 			mistakesDifficulty = 5;

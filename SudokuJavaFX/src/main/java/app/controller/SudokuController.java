@@ -331,7 +331,7 @@ public class SudokuController implements Initializable {
 								}
 								Sudoku.updateMistakes();
 								
-								if (Sudoku.mistakes >= ) {
+								if (Sudoku.getMistakes() >= Sudoku.getMaxMistakes()) {
 									
 								}
 							}
